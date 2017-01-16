@@ -5,12 +5,12 @@ application up and running.
 
 Things you may want to cover:
 
-* System dependencies
+== System dependencies
   sudo apt-get update -y
   sudo apt-get upgrade -y
   sudo apt-get install -y git-core curl redis-server cmake libssl-dev libreadline-dev zlib1g-dev
 
-* How to setup demo ruby stack
+== How to setup demo ruby stack
 
 1) Add a user on server if you're root
 2) Login as a user 'nedstark' or any other
