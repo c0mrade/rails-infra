@@ -10,8 +10,8 @@ gem 'spring', :group => :development
 
 gem 'sqlite3'
 gem 'redis-rails'
-
-
+gem 'unicorn'
+gem 'pry-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

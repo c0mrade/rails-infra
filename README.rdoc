@@ -40,6 +40,18 @@ Things you may want to cover:
    cd rails-infra
    gem install bundler
    bundle install
+8. Setup app server
+   rake secret
+   edit config/secrets.yml
+   RAILS_ENV=production rake db:create #optional
+   mkdir -p shared/pids shared/sockets shared/log # create shared folders
+9. Unicorn server as a service
+   sudo vi /etc/init.d/unicorn_appname   
+
+== Monitoring
+
+1. Redis instance
+   redis-cli monitor
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
