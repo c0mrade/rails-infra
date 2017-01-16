@@ -40,14 +40,7 @@ Things you may want to cover:
    cd rails-infra
    gem install bundler
    bundle install
-8. Setup app server
-   https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
-   rake secret
-   edit config/secrets.yml
-   RAILS_ENV=production rake db:create #optional
-   mkdir -p shared/pids shared/sockets shared/log # create shared folders
-9. Unicorn server as a service
-   sudo vi /etc/init.d/unicorn_appname
+8. Setup app server [https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04]
 
 == Monitoring
 
