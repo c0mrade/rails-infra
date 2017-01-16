@@ -18,3 +18,17 @@ stdout_path "#{shared_dir}/log/unicorn.stdout.log"
 
 # Set master PID location
 pid "#{shared_dir}/pids/unicorn.pid"
+
+before_fork do |server, worker|
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.connection.disconnect!
+    Rails.logger.info('Disconnected from ActiveRecord')
+  end
+end
+
+after_fork do |server, worker|
+  if defined?(ActiveRecord::Base)
+    ActiveRecord::Base.establish_connection
+    Rails.logger.info('Connected to ActiveRecord')
+  end
+end
