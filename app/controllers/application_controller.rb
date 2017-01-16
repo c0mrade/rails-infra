@@ -3,6 +3,6 @@ class ApplicationController < ActionController::API
     Rails.cache.fetch('some_data', expires_in: 2.seconds) do
       'some data inside'
     end
-    render text: "Request landed at instance: #{APP_INSTANCE_NUMBER}"
+    render text: 'Request landed at app instance'
   end
 end
