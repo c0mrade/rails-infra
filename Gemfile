@@ -9,8 +9,6 @@ gem 'spring', :group => :development
 
 
 gem 'sqlite3'
-
-gem 'redis', '~>3.2'
 gem 'redis-rails'
 
 

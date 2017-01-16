@@ -9,6 +9,8 @@ Things you may want to cover:
   sudo apt-get update -y
   sudo apt-get upgrade -y
   sudo apt-get install -y git-core curl redis-server cmake libssl-dev libreadline-dev zlib1g-dev
+  # optional for sqlite3
+  sudo apt-get install libsqlite3-dev
 
 == How to setup demo ruby stack
 
@@ -23,7 +25,7 @@ Things you may want to cover:
   # Load rbenv automatically by appending
   # the following to ~/.bash_profile:
   eval "$(rbenv init -)"
-  source ~/.bash_profile
+  source ~/.bashrc
   type rbenv
   #=> "rbenv is a function" - test if installation is successful
 5. Install ruby-build:
@@ -33,7 +35,11 @@ Things you may want to cover:
   rbenv install 2.3.0 #might take a while
   rbenv global 2.3.0 #set global ruby
   ruby -v # make sure it showing the right version
-
+7. Back to the home folder `cd ~`
+   git clone https://github.com/c0mrade/rails-infra.git
+   cd rails-infra
+   gem install bundler
+   bundle install
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
