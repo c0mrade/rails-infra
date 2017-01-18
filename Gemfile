@@ -11,6 +11,7 @@ gem 'spring', :group => :development
 gem 'sqlite3'
 gem 'redis-rails'
 gem 'unicorn'
+gem 'foreman'
 gem 'pry-rails'
 
 # To use ActiveModel has_secure_password
